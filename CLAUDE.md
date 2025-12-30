@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Language
+-- 全ての返信は日本語で行ってください
+-- コメントやドキュメントも日本語で作成してください
+
 ## Repository Status
 
 This is a new repository with no code yet. This file should be updated once the codebase is established.
