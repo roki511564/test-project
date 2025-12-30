@@ -6,14 +6,28 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 -- 全ての返信は日本語で行ってください
 -- コメントやドキュメントも日本語で作成してください
 
-## Repository Status
+# テストコード作成時の厳守事項
 
-This is a new repository with no code yet. This file should be updated once the codebase is established.
+## 絶対に守ってください！
 
-## Commands
+### テストコードの品質
+- テストは必ず実際の機能を検証すること
+- `expect(true).toBe(true)` のような意味のないアサーションアサーションは絶対に書かない
+- 各テストケースは具体的な入力と期待される出力を検証すること
+- モックは必要最小限に留め、実際の動作に近い形でテストすること
 
-To be added once build/test infrastructure is in place.
+### ハードコーディングの禁止
+- テストを通すためだけのハードコードは絶対に禁止
+- 本番コードに `if (testMode)` のような条件分岐を入れない
+- テスト用の特別な値（マジックナンバー）を本番コードに埋め込まない
+- 環境変数や設定ファイルを使用して、テスト環境と本番環境を適切に分離すること
 
-## Architecture
+### テスト実装の原則
+- テストが失敗する状態から始めること（Red-Green-Refactor）
+- 境界値、異常系、エラーケースも必ずテストすること
+- カバレッジだけでなく、実際の品質を重視すること
+- テストケース名は何をテストしているか明確に記述すること
 
-To be added once code structure is established.
+### 実装前の確認
+- 機能の仕様を正しく理解してからテストを書くこと
+- 不明な点があれば、仮の実装ではなく、ユーザーに確認すること
